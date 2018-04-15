@@ -1,5 +1,5 @@
 # Plus 500
-NodeJS, Express, Passport & MySQL web application basic project.
+NodeJS, Express, Passport & MySQL Web Application Basic Project.
 
 
 Finished:
