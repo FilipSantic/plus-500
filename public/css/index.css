@@ -1,0 +1,19 @@
+#aplikacija
+{
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  width: 50%;
+  text-align: center;
+}
+
+#logo
+{
+  margin-bottom: 30px;
+}
+
+#greska
+{
+  color: red;
+  margin-top: 20px;
+}
