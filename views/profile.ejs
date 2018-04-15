@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Plus 500 - Profil</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link href="css/profile.css" rel="stylesheet" type="text/css" ></link>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <style>
+            body 		{ padding-top:80px; word-wrap:break-word; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header text-center">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" href="/profile"><img src="img/logo.png" alt="" width="80" height="16"></a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="/profile">Početna</a></li>
+                        <li><a href="/trgovina">Trgovina devizama</a></li>
+                        <li><a href="/stanje">Stanje računa</a></li>
+                        <li><a href="/kupovine">Moje kupovine</a></li>
+                        <li><a href="/uredi">Uredi profil</a></li>
+                        <li><a href="/odjava">Odjavi se</a></li>
+                      </ul>
+                    </div>
+                </nav>
+                <h1><span class="fa fa-user"></span> Dobrodošao/la <%= user.korisnik %></h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="well">
+                        <h3><span class="fa fa-money"></span> Tečajna lista u odnosu na kunu:</h3>
+                            <p>
+                                <table class="table table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>Država</th>
+                                        <th>Valuta</th>
+                                        <th>Jedinica</th>
+                                        <th>Tečaj</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th>Australija</th>
+                                        <th>AUD</th>
+                                        <th>1</th>
+                                        <th id="HRKAUD"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Kanada</th>
+                                        <th>CAD</th>
+                                        <th>1</th>
+                                        <th id="HRKCAD"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Češka</th>
+                                        <th>CZK</th>
+                                        <th>1</th>
+                                        <th id="HRKCZK"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Danska</th>
+                                        <th>DKK</th>
+                                        <th>1</th>
+                                        <th id="HRKDKK"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Mađarska</th>
+                                        <th>HUF</th>
+                                        <th>100</th>
+                                        <th id="HRKHUF"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Japan</th>
+                                        <th>JPY</th>
+                                        <th>100</th>
+                                        <th id="HRKJPY"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Norveška</th>
+                                        <th>NOK</th>
+                                        <th>1</th>
+                                        <th id="HRKNOK"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Švedska</th>
+                                        <th>SEK</th>
+                                        <th>1</th>
+                                        <th id="HRKSEK"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Švicarska</th>
+                                        <th>CHF</th>
+                                        <th>1</th>
+                                        <th id="HRKCHF"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Velika Britanija</th>
+                                        <th>GBP</th>
+                                        <th>1</th>
+                                        <th id="HRKGBP"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>SAD</th>
+                                        <th>USD</th>
+                                        <th>1</th>
+                                        <th id="HRKUSD"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>EMU</th>
+                                        <th>EUR</th>
+                                        <th>1</th>
+                                        <th id="HRKEUR"></th>
+                                      </tr>
+                                      <tr>
+                                        <th>Poljska</th>
+                                        <th>PLN</th>
+                                        <th>1</th>
+                                        <th id="HRKPLN"></th>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="well">
+                        <h3><span class="fa fa-shopping-cart"></span> Konverzija</h3>
+                            <p>
+                              <form>
+                                <p>
+                                  <label for="amount">Količina:</label>
+                                  <input type="text" id="amount" value="">
+                                  <select id="select">
+                                    <option value="HRK">HRK </option>
+                                  </select>
+                                  <select id="select1">
+                                    <option value="HRK">HRK </option>
+                                    <option value="AUD">AUD </option>
+                                    <option value="CAD">CAD </option>
+                                    <option value="CZK">CZK </option>
+                                    <option value="DKK">DKK </option>
+                                    <option value="HUF">HUF </option>
+                                    <option value="JPY">JPY </option>
+                                    <option value="NOK">NOK </option>
+                                    <option value="SEK">SEK </option>
+                                    <option value="CHF">CHF </option>
+                                    <option value="GPB">GBP </option>
+                                    <option value="USD">USD </option>
+                                    <option value="EUR">EUR </option>
+                                    <option value="PLN">PLN </option>
+                                  </select>
+                                  <input type="text" id="result" value="" readonly="readonly">
+                                </p>
+                                <p>
+                                  <input type="button" value="Izračunaj" onclick="calculate();">
+                                  <input type="reset" value="Resetiraj">
+                                </p>
+                              </form>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="js/profile.js"></script>
+    </body>
+</html>
