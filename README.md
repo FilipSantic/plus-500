@@ -1,5 +1,6 @@
 # Plus 500
-Node, Express, Passport & MySQL web application project
+Node, Express, Passport & MySQL web application basic project.
+
 
 Finished:
 - Login & Register system
