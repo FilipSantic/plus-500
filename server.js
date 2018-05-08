@@ -6,7 +6,6 @@ var morgan = require('morgan');
 var passport = require('passport');
 var flash = require('connect-flash');
 var engine = require('consolidate');
-var phonegap = require('connect-phonegap');
 var path = require('path');
 
 var app = express();
@@ -35,8 +34,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session()); // trajni login session
 app.use(flash());
-
-app.use(phonegap());
 
 // Routes
 require('./app/routes.js')(app, passport); // spajanje svih ruta u main.js
